@@ -1,0 +1,82 @@
+@charset "utf-8";
+@import "../core";
+
+$img-nav-url:   #{$img-url}#{'nav/'}      !default;
+$img-login-url: #{$img-url}#{'login/'}    !default;
+
+/* index */
+#app {
+    .#{$prefix}-header {
+        padding:            10px;
+        border-bottom:      1px #ccc solid;
+    }
+
+    .#{$prefix}-container {
+        padding:                10px;
+    }
+
+    .#{$prefix}-404 {
+        color:              red;
+        font-size:          20px;
+    }
+}
+.xj-cursor{
+    cursor: pointer;
+}
+.card.container{
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    color: #000000;
+    float: left;
+    margin: 0 30px;
+    position: relative;
+    border: 1px solid #ddd;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    .cardImg{
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        img{
+            width: 80px;
+            height: 80px;
+        }
+    }
+    .content {
+        text-align: center;
+        .header{
+            font-size:24px;
+        }
+        .meta {
+            font-size: 14px;
+        }
+        .discription{
+            font-size: 12px;
+        }
+    }
+    .heart {
+        cursor: pointer;
+        background: url("../../../assets/images/global/collection.svg") no-repeat;
+    }
+    .extra {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        font-size: 12px;
+        .right {
+            margin-right: 10px;
+        }
+        .likeNum {
+            font-size: 12px;
+            width: 66px;
+            display: inline-block;
+            text-align: right;
+        }
+    }
+    #addUserBtn {
+        margin-top: 30px;
+    }
+}
