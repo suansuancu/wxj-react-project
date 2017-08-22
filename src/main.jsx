@@ -548,113 +548,37 @@ class HtmlForTest extends React.Component {
 	}
 }
 
+
+
+
+
+
+
+
+
+
+
 /* project */
-class Header extends React.Component {
+import Nav from '../src/components/wxj-nav/nav';
+import Header from '../src/components/wxj-header/wxj-header';
+import MainCont from '../src/components/wxj-mainContent/main-content';
 
-}
-
-let numStyle = {fontWeight:500,fontWeight:900};
-class CardItem extends React.Component {
+class WxjApp extends React.Component{
 	constructor(props){
 		super(props);
-
 	}
 
 	render(){
-
-		let {imgSrc, name, meta, desc, joined, likeNum} = this.props;
-		return (<div className="ui card container">
-			<div className="cardImg">
-				<img src={imgSrc} alt=""/>
-			</div>
-			<div className="content">
-				<div className="header">{name}</div>
-				<div className="meta">
-					<a href="javascript:void(0)">{meta}</a>
-				</div>
-				<div className="discription">{desc}</div>
-			</div>
-			<div className="extra content">
-				<span className="right floated">Join in {joined}</span>
-				<span className="likeNum heart"><strong style={numStyle}>{likeNum}</strong> likes</span>
-			</div>
-		</div>)
-
-	}
-}
-let data = [
-	{
-		imgSrc: require('../src/assets/images/global/matt.svg'),
-		name: 'Matt',
-		meta: 'Friends',
-		desc: 'Matthew is an interior designer living in New York.',
-		joined: 2013,
-		likeNum: 75
-	},
-	{
-		imgSrc: require('../src/assets/images/global/molly.svg'),
-		name: 'Molly',
-		meta: 'Coworker',
-		desc: 'Molly is a personal assistant living in Paris.',
-		joined: 2013,
-		likeNum: 35
-	},
-	{
-		imgSrc: require('../src/assets/images/global/jane.svg'),
-		name: 'Jane',
-		meta: 'Coworker',
-		desc: 'Elyse is a copywriter working in New York.',
-		joined: 2014,
-		likeNum: 151
-	},
-	{
-		imgSrc: require('../src/assets/images/global/jenny.svg'),
-		name: 'Jenny',
-		meta: 'Coworker',
-		desc: 'Elyse is a copywriter working in New York.',
-		joined: 2014,
-		likeNum: 151
-	},
-	{
-		imgSrc: require('../src/assets/images/global/sally.svg'),
-		name: 'sally',
-		meta: 'Coworker',
-		desc: 'Elyse is a copywriter working in New York.',
-		joined: 2014,
-		likeNum: 151
-	}
-];
-import addUserIcon from '../src/assets/images/global/add-usr.svg'
-class AddUserItem extends React.Component {
-	constructor(props){
-		super(props)
-	}
-
-	render(){
-		return (<div className="ui card container xj-cursor">
-					<img id="addUserBtn" src={addUserIcon} alt=""/>
-
+		return (<div>
+				<Header/>
+				<Nav/>
+				<MainCont/>
 			</div>
 		)
 	}
-}
-class CardWrap extends React.Component {
-	constructor(props){
-		super(props);
-	}
 
-	render(){
-		let card = data.map(function(value,index){
-			return <CardItem key={index} {...value} />
-		});
-		return (<div>
-			{card}
-			<AddUserItem />
-		</div>)
-
-	}
 }
-ReactDOM.render(<CardWrap/>, document.getElementById('app'));
+ReactDOM.render(<WxjApp/>, document.getElementById('app'));
 
 
 
