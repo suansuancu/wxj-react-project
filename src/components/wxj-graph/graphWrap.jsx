@@ -1,6 +1,6 @@
 import React from 'react';
 
-class GraphWrap extends React.Component {
+export default class GraphWrap extends React.Component {
 	constructor(props){
 		super(props);
 	}

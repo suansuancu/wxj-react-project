@@ -557,11 +557,8 @@ class HtmlForTest extends React.Component {
 
 
 
-
 /* project */
-import Nav from '../src/components/wxj-nav/nav';
-import Header from '../src/components/wxj-header/wxj-header';
-import MainCont from '../src/components/wxj-mainContent/main-content';
+import WxjRouter from '../src/router/wxj-router';
 
 class WxjApp extends React.Component{
 	constructor(props){
@@ -570,9 +567,7 @@ class WxjApp extends React.Component{
 
 	render(){
 		return (<div>
-				<Header/>
-				<Nav/>
-				<MainCont/>
+				<WxjRouter/>
 			</div>
 		)
 	}

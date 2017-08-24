@@ -7,6 +7,7 @@ $img-login-url: #{$img-url}#{'login/'}    !default;
 /* index */
 #app {
     height: 100%;
+    width: 100%;
     position: absolute;
     .#{$prefix}-header {
         padding:            10px;
@@ -25,7 +26,7 @@ $img-login-url: #{$img-url}#{'login/'}    !default;
 .xj-cursor{
     cursor: pointer;
 }
-.card-content {
+.main-content {
     margin-top: 30px;
     margin-left: 130px;
 }
@@ -65,16 +66,15 @@ $img-login-url: #{$img-url}#{'login/'}    !default;
             font-size: 12px;
         }
     }
-    .heart {
-        cursor: pointer;
-        background: url("../../../assets/images/global/collection.svg") no-repeat;
-    }
+
+
     .extra {
         position: absolute;
         bottom: 0;
         right: 0;
         width: 100%;
         font-size: 12px;
+        user-select: none;
         .right {
             margin-right: 10px;
         }
@@ -83,6 +83,10 @@ $img-login-url: #{$img-url}#{'login/'}    !default;
             width: 66px;
             display: inline-block;
             text-align: right;
+            background: url("../../../assets/images/global/unCollection.svg") no-repeat;
+        }
+        .heart {
+            background: url("../../../assets/images/global/collection.svg") no-repeat;
         }
     }
     #addUserBtn {

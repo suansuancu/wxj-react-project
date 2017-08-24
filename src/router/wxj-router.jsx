@@ -4,37 +4,32 @@ import {
 	Route,
 	Link
 } from 'react-router-dom'
+
+import Header from '../components/wxj-nav/w-header';
+import NavMenu from '../components/wxj-nav/w-nav';
+import Home from '../components/home';
 import Card from '../components/wxj-card/cardWrap';
 import Todo from '../components/wxj-todo/todoWrap';
 import Graph from '../components/wxj-graph/graphWrap';
+import Login from '../components/wxj-login/login';
 
 
-const projectRouter = () =>(
-	<Router >
-		<div className="wxj-main-nav">
-			<div className="user-menu common-menu xj-cursor"><Link to="/graph">用户管理</Link></div>
-			<div className="todo-menu common-menu xj-cursor"><Link to="/todo">事项管理</Link></div>
-			<div className="graph-menu common-menu xj-cursor"><Link to="/card">图表管理</Link></div>
-
-
+const MainContent = () => (
+	<Router>
+		<div>
+			<Header/>
+			<NavMenu/>
+			<div className="main-content">
+				<Route exact path="/" component={Home}/>
+				<Route path="/graph" component={Graph}/>
+				<Route path="/card" component={Card}/>
+				<Route path="/todo" component={Todo}/>
+				<Route path="/login" component={Login}/>
+			</div>
 		</div>
+
 	</Router>
 );
-class MainContent extends React.Component {
-	constructor(props){
-		super(props);
-	}
 
-	render(){
+export default MainContent;
 
-		return (<div>
-			<Route path="/" component={Graph}/>
-			<Route exact path="/graph" component={Graph}/>
-			<Route path="/card" component={Card}/>
-			<Route path="/todo" component={Todo}/>
-		</div>)
-
-	}
-}
-
-export default projectRouter;
